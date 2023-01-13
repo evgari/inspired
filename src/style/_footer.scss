@@ -42,6 +42,14 @@
     &_social {
       grid-area: social;
       justify-self: center;
+
+      @include laptop {
+        justify-self: start;
+      }
+
+      @include tablet {
+        justify-self: center;
+      }
     }
 
     &_contacts {

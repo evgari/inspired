@@ -88,6 +88,10 @@ fieldset {
   &_mb {
     margin-bottom: 120px;
 
+    @include laptop {
+      margin-bottom: 117px;
+    }
+
     @include tablet {
       margin-bottom: 80px;
     }
