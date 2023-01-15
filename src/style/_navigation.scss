@@ -1,15 +1,17 @@
-.navigation_mb {
-  margin-bottom: 50px;
+.navigation {
+  &_margin_bottom {
+    margin-bottom: 50px;
 
-  @include laptop {
-    margin-bottom: 38px;
-  }
-
-  @include tablet {
-    margin-bottom: 29px;
-  }
-
-  @include mobile {
-    margin-bottom: 10px;
+    @include laptop {
+      margin-bottom: 38px;
+    }
+  
+    @include tablet {
+      margin-bottom: 29px;
+    }
+  
+    @include mobile {
+      margin-bottom: 10px;
+    }
   }
 }

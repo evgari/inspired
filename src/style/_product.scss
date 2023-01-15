@@ -19,12 +19,10 @@
     margin-bottom: 13px;
     font-size: 14px;
     font-weight: 400;
-    line-height: 17px;
 
     @include tablet {
       margin-bottom: 5px;
       font-size: 12px;
-      line-height: 15px;
     }
   }
 
@@ -41,11 +39,9 @@
 
   &__price {
     font-size: 14px;
-    line-height: 17px;
 
     @include tablet {
       font-size: 12px;
-      line-height: 15px;
     }
   }
 

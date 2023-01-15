@@ -4,20 +4,17 @@
     padding-bottom: 25px;
     font-size: 32px;
     font-weight: 400;
-    line-height: 39px;
     text-align: center;
     text-transform: uppercase;
 
     @include tablet {
       padding-bottom: 16px;
       font-size: 24px;
-      line-height: 29px;
     }
 
     @include mobile {
       padding-bottom: 9px;
       font-size: 18px;
-      line-height: 22px;
     }
   }
 
