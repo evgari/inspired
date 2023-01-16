@@ -90,7 +90,7 @@ export const renderFooter = () => {
         {
           append: createElement('a', 
             {
-              className: '"footer__link',
+              className: 'footer__link',
               textContent: item.title,
               href: `#/${gender}/${item.slug}`,
             } 
@@ -108,33 +108,37 @@ export const renderFooter = () => {
         appends: categoryLinks,
       },
     );
-  }; 
+  };
+  
+  const createCategoryItem = (gender) => {
+    const li = createElement('li', {
+      classList: 'footer-category__item'
+    }, {
+      appends: 
+        [
+            createElement('h3', {
+            className: 'footer-category__subtitle'
+          }, {
+            append: createElement('a', {
+              className: 'footer__link',
+              href: `#/${gender}`,
+              textContent: DATA.navigation[gender].title,
+            })
+          }),
+          createCategorySublist(gender)
+        ],
+    });
+
+    return li;
+  };
 
   for (const genderName in DATA.navigation) {
-    createElement('a',
-      {
-        className: 'footer__link',
-        href: `#/${genderName}`,
-        textContent: DATA.navigation[genderName].title,
-      },
-      {
-        parent: createElement('h3',
-          {
-            className: 'footer-category__subtitle',
-          },
-          {
-            parent: createElement('li', {
-              className: 'footer-category__item'
-            }, {
-              parent: footerCategoryList,
-              append: createCategorySublist(genderName),
-            }),
-          }
-        ),
-      },
-    );
+    const item = createCategoryItem(genderName);
+
+    footerCategoryList.append(item);
   };
 
   footer.append(container);
 };
+
 
