@@ -6,7 +6,7 @@ export const mainPage = (gender = 'women') => {
   console.log('gender: ', gender);
   renderNavigation(gender);
   renderHero(gender);
-  renderProducts();
+  renderProducts('Новинки', {gender});
 };
 
 

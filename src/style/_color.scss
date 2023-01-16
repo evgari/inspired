@@ -18,17 +18,4 @@
     height: 12px;
     transform: translate(-50%, -50%);
   }
-
-  &_red::after {
-    background-color: red;
-  }
-
-  &_white::after {
-    border: 1px solid $gray;
-    background-color: white;
-  }
-  
-  &_black::after {
-    background-color: black;
-  }
 }

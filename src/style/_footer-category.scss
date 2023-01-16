@@ -25,6 +25,11 @@
     }
   }
 
+  &__item {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   &__subtitle {
     margin-bottom: 10px;
     font-size: 14px;
