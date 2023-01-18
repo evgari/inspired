@@ -4,21 +4,6 @@ import { router } from '../router';
 export const renderPagination = (wrapperPagination, page, pages, count) => {
   wrapperPagination.textContent = '';
 
-  if (pages > count) {
-    createElement(
-      'a',
-      {
-        className: `pagination__arrow pagination__arrow_start
-          ${!isNotStart ? 'pagination__arrow_disabled' : ''}`,
-        href: `${router.getCurrentLocation().url}?page=${1}`,
-        ariaLabel: 'В начало',
-      },
-      {
-        parent: wrapperPagination,
-      }
-    )
-  }
-
   const listPagination = createElement(
     'ul',
     {
@@ -68,6 +53,19 @@ export const renderPagination = (wrapperPagination, page, pages, count) => {
   }
 
   if (pages > count) {
+    createElement(
+      'a',
+      {
+        className: `pagination__arrow pagination__arrow_start
+          ${!isNotStart ? 'pagination__arrow_disabled' : ''}`,
+        href: `${router.getCurrentLocation().url}?page=${1}`,
+        ariaLabel: 'В начало',
+      },
+      {
+        parent: wrapperPagination,
+      }
+    ),
+    
     createElement(
       'a',
       {
