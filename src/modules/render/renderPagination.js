@@ -16,6 +16,7 @@ export const renderPagination = (wrapperPagination, page, pages, count) => {
 
   const isNotStart = page - Math.floor(count / 2) > 1;
   const isEnd = page + Math.floor(count / 2) > pages;
+  const isPrevEnd = page === pages - 1;
 
   if (count > pages) {
     count = pages;
@@ -70,7 +71,7 @@ export const renderPagination = (wrapperPagination, page, pages, count) => {
       'a',
       {
         className: `pagination__arrow pagination__arrow_end
-          ${isEnd ? 'pagination__arrow_disabled' : ''}`,
+          ${isEnd || isPrevEnd ? 'pagination__arrow_disabled' : ''}`,
         href: getUrl({page: pages}),
         ariaLabel: 'В конец',
       },
