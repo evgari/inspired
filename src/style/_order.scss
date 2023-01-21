@@ -50,8 +50,17 @@
     font-size: 14px;
     font-weight: 400;
 
+    @include mobile {
+      height: 36px;
+      font-size: 10px;
+    }
+
     &::placeholder {
       color: $gray;
+
+      @include mobile {
+        font-size: 10px;
+      }
     }
   }
 
