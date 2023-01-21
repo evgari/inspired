@@ -1,0 +1,28 @@
+.main-button {
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: $second-color;
+  background-color: $main-color;
+  transition: color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+
+  @include tablet {
+    font-size: 10px;
+  }  
+
+  &:hover {
+    background-color: $gray;
+  }
+
+  &:focus-visible {
+    background-color: $dark-gray;
+  }
+
+  &:disabled {
+    background-color: $light-gray;
+  }
+}

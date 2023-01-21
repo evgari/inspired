@@ -1,0 +1,22 @@
+.count {
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  width: 107px;
+  height: 46px;
+
+  @include tablet {
+    height: 36px;
+  }
+
+  &__item {
+    flex-basis: 33.3%;
+    font-size: 16px;
+  }
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

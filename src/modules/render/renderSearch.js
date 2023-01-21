@@ -46,7 +46,7 @@ createElement(
 createElement(
   'button',
   {
-    className: 'search__btn',
+    className: 'search__btn main-button',
     type: 'submit',
     textContent: 'Искать',
   },

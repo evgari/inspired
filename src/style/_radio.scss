@@ -1,0 +1,48 @@
+.radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__input {
+    position: relative;
+    padding: 4px;
+    margin-right: 8px;
+    appearance: none;
+
+    &::before {
+      content: '';
+      border: 2px solid $main-color;
+      border-radius: 50%;
+      display: block;
+      width: 16px;
+      height: 16px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: $main-color;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+    
+    &:focus {
+      outline: none;
+    }
+
+    &:checked::after {
+      opacity: 1;
+    }
+
+    &:focus-visible::before,
+    &:hover:not(:disabled)::before {
+      box-shadow: 0 0 10px $dark-gray;
+    }
+  }
+}

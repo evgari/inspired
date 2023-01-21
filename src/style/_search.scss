@@ -66,16 +66,9 @@
   &__btn {
     flex-basis: 141px;
     height: 100%;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 120%;
-    color: $second-color;
-    background-color: $main-color;
-    text-transform: uppercase;
 
     @include tablet {
       flex-basis: 124px;
-      font-size: 12px;
     }
 
     @include mobile {
