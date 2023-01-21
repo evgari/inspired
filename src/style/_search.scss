@@ -32,7 +32,7 @@
     height: 100%;
     font-size: 14px;
     font-weight: 400;
-    line-height: 120%;
+    line-height: 1.2;
 
     @supports not selector(:focus-visible) {
       &:focus {
