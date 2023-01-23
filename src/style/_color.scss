@@ -5,6 +5,10 @@
   width: 18px;
   height: 18px;
 
+  // &:has(:checked) {
+  //   border: 0.4px solid $gray;
+  // }
+
   &_check {
     border: 0.4px solid $gray;
   }
@@ -18,5 +22,13 @@
     width: 12px;
     height: 12px;
     transform: translate(-50%, -50%);
+  }
+
+  &__input:checked + &__check {
+    position: absolute;
+    inset: 0;
+    border: 0.4px solid $gray;
+    border-radius: 50%;
+    display: block;
   }
 }
