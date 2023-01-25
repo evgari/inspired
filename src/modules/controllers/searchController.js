@@ -14,7 +14,7 @@ export const searchController = formSearch => {
   });
 };
 
-export const searchPageController =(routerData) => {
+export const searchPageController = (routerData) => {
   const params = {
     search: routerData.params.value,
   };
